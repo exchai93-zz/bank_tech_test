@@ -3,7 +3,8 @@ class Account
   attr_reader :balance
 
   def initialize
-    @balance = 100
+    @balance = 0
+    @statement = statement
   end
 
   def deposit(amount)
@@ -13,8 +14,8 @@ class Account
   def withdraw(amount)
     self.balance -= amount
   end
-  
+
   private
-  attr_writer :balance
+  
 
 end
