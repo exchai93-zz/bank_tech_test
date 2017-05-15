@@ -5,15 +5,15 @@ describe Statement do
   let(:transaction) { Transaction.new(20, 10, 200) }
 
   describe '#initalize' do
-    it 'has an empty transaction history' do
-      expect(statement.transaction_history).to eq []
+    it 'is empty' do
+      expect(statement.transactions).to eq []
     end
   end
 
   describe 'new transaction' do
     it 'should be included in the statement' do
-      statement.transaction_history << transaction
-      expect(statement.transaction_history).to eq [transaction]
+      statement.transactions << transaction
+      expect(statement.transactions).to eq [transaction]
     end
   end
 
