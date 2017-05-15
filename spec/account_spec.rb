@@ -9,4 +9,15 @@ describe Account do
     end
   end
 
+  describe '#deposit' do
+    it 'adds to the account balance' do
+      expect{ account.deposit(25) }.to change{ account.balance }.by 25
+    end
+  end
+
+  describe '#withdraw' do
+    it 'deducts from the account balance' do
+      expect{ account.withdraw(50) }.to change{ account.balance }.by -50
+    end
+  end
 end
